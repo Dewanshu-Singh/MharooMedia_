@@ -22,22 +22,36 @@
       <div class="logo-wrapper">
         <a href="#" class="logo" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
           <div style="display: flex; align-items: center; gap: 8px;">
-            <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: 45px; object-fit: contain;">
-            <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--primary);">Mharoo Media™</span>
+            <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: clamp(32px, 5vw, 45px); object-fit: contain;">
+            <span style="font-family: var(--font-serif); font-size: clamp(1.1rem, 4vw, 1.4rem); font-weight: 700; color: var(--primary);">Mharoo Media</span>
           </div>
           <span class="logo-tagline">Growing a Brighter Tomorrow</span>
         </a>
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#universities">Universities &darr;</a></li>
-          <li><a href="#solutions">Solutions &darr;</a></li>
+          <li><a href="#universities">Universities</a></li>
+          <li><a href="#solutions">Solutions</a></li>
           <li><a href="#work">Our Work</a></li>
-          <li><a href="#insights">Insights</a></li>
+          <li><a href="#featured-videos">Insights</a></li>
           <li><a href="#about">About</a></li>
         </ul>
       </nav>
-      <div style="display: flex; gap: 1rem; align-items: center;">
+      <div style="display: flex; gap: 1.5rem; align-items: center;">
+        <div class="contact-dropdown-wrapper" style="position: relative;">
+          <button class="nav-phone" id="contact-toggle" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: var(--primary); font-size: 1rem; font-family: inherit; padding: 0;">
+            <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
+            +91 90011 03805
+          </button>
+          <div class="contact-dropdown" id="contact-dropdown">
+            <a href="tel:+919001103805" class="dropdown-item">
+              <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i> Call Us
+            </a>
+            <a href="https://wa.me/919001103805" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+              <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i> WhatsApp
+            </a>
+          </div>
+        </div>
         <a href="#contact" class="btn btn-primary btn-pill" id="nav-cta">
           Book a Consultation <i data-lucide="arrow-up-right" class="icon-arrow" style="width: 16px; height: 16px;"></i>
         </a>
@@ -58,7 +72,7 @@
             <span class="eyebrow text-light" style="margin-bottom: 0;">India's University Growth Partner</span>
             <span class="eyebrow-line"></span>
           </div>
-          <h1 class="display-1" style="line-height: 1.1; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">More Students.<br>Bigger Futures<span style="color: #E63946;">.</span></h1>
+          <h1 class="display-1" style="line-height: 1.1; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">WE MAKE UNIVERSITIES<br>MATTER<span style="color: #E63946;">.</span></h1>
           <p style="font-size: 1.125rem; opacity: 0.9; max-width: 450px; line-height: 1.5;">We help universities grow through strategy, brand,<br>digital and performance — from visibility to admissions.</p>
           <div class="hero-actions" style="margin-top: 2rem;">
             <a href="#contact" class="btn btn-primary btn-pill">Book a University Growth Consultation <i data-lucide="arrow-up-right" class="icon-arrow" style="width: 16px; height: 16px;"></i></a>
@@ -173,12 +187,14 @@
         <div class="clients-row">
           <img src="/LOGO1.png" alt="Client Logo" class="client-logo" style="height: 120px; max-height: none; max-width: none;">
           <img src="/LOGO2.PNG" alt="Client Logo" class="client-logo">
+          <img src="/srn.avif" alt="SRN Logo" class="client-logo" style="height: 130px; max-height: none; max-width: none; mix-blend-mode: multiply;">
           <img src="/LOGO3.png" alt="Client Logo" class="client-logo">
         </div>
-        <!-- Bottom Row: 3 Logos -->
+        <!-- Bottom Row: 4 Logos -->
         <div class="clients-row">
           <img src="/LOGO5.png" alt="Client Logo" class="client-logo">
           <img src="/IMG_4146.png" alt="Client Logo" class="client-logo" style="height: 100px; max-height: none; max-width: none;">
+          <img src="/vgu.webp" alt="VGU Logo" class="client-logo" style="height: 130px; max-height: none; max-width: none; mix-blend-mode: multiply;">
           <img src="/Screenshot%202026-09-16%20125746.png" alt="Client Logo" class="client-logo" style="height: 100px; max-height: none; max-width: none;">
         </div>
       </div>
@@ -474,7 +490,7 @@
             </div>
           </div>
           <div class="yt-video-wrapper">
-            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Shodh AI" class="yt-thumbnail">
+            <img src="https://img.youtube.com/vi/U3simEyrRJ4/maxresdefault.jpg" alt="Shodh AI" class="yt-thumbnail">
             <div class="yt-overlay-top">
               <div class="yt-channel-info">
                 <div class="yt-channel-logo">S</div>
@@ -485,7 +501,7 @@
               </div>
               <div class="yt-slide-count">01 / 04</div>
             </div>
-            <button class="yt-play-btn"><i data-lucide="play" fill="white"></i></button>
+            <button class="yt-play-btn" data-url="https://www.youtube.com/embed/U3simEyrRJ4?autoplay=1"><i data-lucide="play" fill="white"></i></button>
             <button class="yt-nav-btn prev"><i data-lucide="chevron-left"></i></button>
             <button class="yt-nav-btn next"><i data-lucide="chevron-right"></i></button>
           </div>
@@ -504,7 +520,7 @@
             </div>
           </div>
           <div class="yt-video-wrapper">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" alt="AESTR Summit" class="yt-thumbnail">
+            <img src="https://img.youtube.com/vi/8xt4O76FKjA/maxresdefault.jpg" alt="AESTR Summit" class="yt-thumbnail">
             <div class="yt-overlay-top">
               <div class="yt-channel-info">
                 <div class="yt-channel-logo" style="background: white; color: black;">A</div>
@@ -515,7 +531,7 @@
               </div>
               <div class="yt-slide-count">02 / 04</div>
             </div>
-            <button class="yt-play-btn"><i data-lucide="play" fill="white"></i></button>
+            <button class="yt-play-btn" data-url="https://www.youtube.com/embed/8xt4O76FKjA?autoplay=1"><i data-lucide="play" fill="white"></i></button>
             <button class="yt-nav-btn prev"><i data-lucide="chevron-left"></i></button>
             <button class="yt-nav-btn next"><i data-lucide="chevron-right"></i></button>
           </div>
@@ -534,7 +550,7 @@
             </div>
           </div>
           <div class="yt-video-wrapper">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Startup Spotlight" class="yt-thumbnail">
+            <img src="https://img.youtube.com/vi/ZiyHOIri4Vo/maxresdefault.jpg" alt="Startup Spotlight" class="yt-thumbnail">
             <div class="yt-overlay-top">
               <div class="yt-channel-info">
                 <div class="yt-channel-logo" style="background: white; color: black;">D</div>
@@ -545,7 +561,7 @@
               </div>
               <div class="yt-slide-count">03 / 04</div>
             </div>
-            <button class="yt-play-btn"><i data-lucide="play" fill="white"></i></button>
+            <button class="yt-play-btn" data-url="https://www.youtube.com/embed/ZiyHOIri4Vo?autoplay=1"><i data-lucide="play" fill="white"></i></button>
             <button class="yt-nav-btn prev"><i data-lucide="chevron-left"></i></button>
             <button class="yt-nav-btn next"><i data-lucide="chevron-right"></i></button>
           </div>
@@ -564,7 +580,7 @@
             </div>
           </div>
           <div class="yt-video-wrapper">
-            <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?q=80&w=2069&auto=format&fit=crop" alt="Shodh AI Vision" class="yt-thumbnail">
+            <img src="https://img.youtube.com/vi/YLhefncZqSs/maxresdefault.jpg" alt="Shodh AI Vision" class="yt-thumbnail">
             <div class="yt-overlay-top">
               <div class="yt-channel-info">
                 <div class="yt-channel-logo" style="background: white; color: black;">S</div>
@@ -575,7 +591,7 @@
               </div>
               <div class="yt-slide-count">04 / 04</div>
             </div>
-            <button class="yt-play-btn"><i data-lucide="play" fill="white"></i></button>
+            <button class="yt-play-btn" data-url="https://www.youtube.com/embed/YLhefncZqSs?autoplay=1"><i data-lucide="play" fill="white"></i></button>
             <button class="yt-nav-btn prev"><i data-lucide="chevron-left"></i></button>
             <button class="yt-nav-btn next"><i data-lucide="chevron-right"></i></button>
           </div>
@@ -597,50 +613,31 @@
         <!-- REEL 1 -->
         <div class="reel-item" data-index="0">
           <div class="reel-content">
-            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop" alt="Reel Placeholder">
+            <iframe src="https://www.instagram.com/reel/DcOBDEbo8zq/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
         </div>
         <!-- REEL 2 -->
         <div class="reel-item" data-index="1">
           <div class="reel-content">
-            <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=1974&auto=format&fit=crop" alt="Reel Placeholder">
+            <iframe src="https://www.instagram.com/reel/DaXmVfXROJX/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
         </div>
         <!-- REEL 3 (Active) -->
         <div class="reel-item active" data-index="2">
           <div class="reel-content">
-            <!-- Simulated Instagram Embed UI -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; background: white; padding: 12px; display: flex; align-items: center; justify-content: space-between; z-index: 2;">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px;">M</div>
-                <div style="display: flex; flex-direction: column;">
-                  <span style="font-weight: 600; font-size: 0.85rem; color: #262626; line-height: 1;">mharoomedia</span>
-                  <span style="font-size: 0.75rem; color: #8e8e8e;">Original audio</span>
-                </div>
-              </div>
-              <button style="background: #0095f6; color: white; border: none; border-radius: 4px; padding: 6px 12px; font-weight: 600; font-size: 0.8rem;">View profile</button>
-            </div>
-            
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Marketing is the game now" style="height: 100%; object-fit: cover;">
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; width: 60px; height: 60px; background: rgba(255,255,255,0.8); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-               <i data-lucide="play" fill="#000" style="color: black; margin-left: 4px;"></i>
-            </div>
-            
-            <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: white; padding: 12px; z-index: 2;">
-              <span style="color: #0095f6; font-size: 0.85rem; font-weight: 500;">View more on Instagram</span>
-            </div>
+            <iframe src="https://www.instagram.com/reel/DZMZBdfxIXW/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
         </div>
         <!-- REEL 4 -->
         <div class="reel-item" data-index="3">
           <div class="reel-content">
-            <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1974&auto=format&fit=crop" alt="Reel Placeholder">
+            <iframe src="https://www.instagram.com/reel/DbNkVB6xXeL/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
         </div>
         <!-- REEL 5 -->
         <div class="reel-item" data-index="4">
           <div class="reel-content">
-            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1974&auto=format&fit=crop" alt="Reel Placeholder">
+            <iframe src="https://www.instagram.com/reel/DWJQEyJkYpa/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
         </div>
       </div>
@@ -658,7 +655,6 @@
         <a href="#contact" class="btn bg-dark" style="padding: 16px 32px; font-weight: 600;">
           Book a Consultation <i data-lucide="arrow-right" class="icon-arrow" style="width: 16px; height: 16px;"></i>
         </a>
-        <a href="#contact" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); padding: 16px 32px;">Get Your Growth Score</a>
       </div>
     </div>
   </section>
@@ -671,8 +667,8 @@
         <div>
           <a href="#" class="logo text-charcoal" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-decoration: none;">
             <div style="display: flex; align-items: center; gap: 8px;">
-              <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: 45px; object-fit: contain;">
-              <span style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--primary);">Mharoo Media™</span>
+              <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: clamp(32px, 5vw, 45px); object-fit: contain;">
+              <span style="font-family: var(--font-serif); font-size: clamp(1.1rem, 4vw, 1.4rem); font-weight: 700; color: var(--primary);">Mharoo Media</span>
             </div>
             <span class="logo-tagline" style="color: var(--text-charcoal); opacity: 0.8;">Growing a Brighter Tomorrow</span>
           </a>
@@ -684,7 +680,7 @@
             <li style="margin-bottom: 8px;"><a href="#universities" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">Universities</a></li>
             <li style="margin-bottom: 8px;"><a href="#solutions" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">Solutions</a></li>
             <li style="margin-bottom: 8px;"><a href="#work" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">Our Work</a></li>
-            <li style="margin-bottom: 8px;"><a href="#insights" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">Insights</a></li>
+            <li style="margin-bottom: 8px;"><a href="#featured-videos" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">Insights</a></li>
             <li style="margin-bottom: 8px;"><a href="#about" style="color: var(--text-charcoal); opacity: 0.8; text-decoration: none;">About</a></li>
           </ul>
         </div>
@@ -719,7 +715,7 @@
       <form class="consultation-form" id="consultation-form">
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
+          <input type="text" id="name" name="name" placeholder="YourName" required>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
@@ -727,13 +723,14 @@
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="john@university.edu" required>
+          <input type="email" id="email" name="email" placeholder="yourname@university.edu" required>
         </div>
         <div class="form-group">
           <label for="message">Detailed Message</label>
           <textarea id="message" name="message" rows="4" placeholder="How can we help your institution grow?" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-pill" style="width: 100%; justify-content: center;">Submit Request</button>
+        <button type="submit" class="btn btn-primary btn-pill" style="width: 100%; justify-content: center;" id="submit-btn">Submit Request</button>
+        <div id="form-status" style="margin-top: 15px; text-align: center; font-weight: 500; display: none;"></div>
       </form>
     </div>
   </div>
@@ -742,6 +739,16 @@
   <script>
     lucide.createIcons();
   </script>
+  <!-- VIDEO MODAL -->
+  <div class="video-modal-overlay" id="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 9999; justify-content: center; align-items: center;">
+    <div style="position: relative; width: 90%; max-width: 800px; height: 80vh; background: transparent;">
+      <button id="close-video-modal" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 8px;">✕</button>
+      <div id="iframe-container" style="width: 100%; height: 100%; border-radius: 12px; overflow: hidden; background: #000;">
+        <!-- iframe will be inserted here dynamically -->
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -66,22 +66,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Form submission (prevent default and close for now)
+  // --- Consultation Form Submission ---
+  const formStatus = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+
   if (consultationForm) {
-    consultationForm.addEventListener('submit', (e) => {
+    consultationForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // Here you would normally send the data via fetch/ajax
-      const submitBtn = consultationForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerText;
-      submitBtn.innerText = 'Request Sent!';
-      submitBtn.style.backgroundColor = 'green';
       
-      setTimeout(() => {
-        consultationModal.classList.remove('active');
-        submitBtn.innerText = originalText;
-        submitBtn.style.backgroundColor = '';
-        consultationForm.reset();
-      }, 2000);
+      const formData = new FormData(consultationForm);
+      const data = Object.fromEntries(formData.entries());
+
+      submitBtn.innerText = 'Sending...';
+      submitBtn.disabled = true;
+      formStatus.style.display = 'block';
+      formStatus.innerText = '';
+
+      try {
+        const response = await fetch('http://localhost:3000/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          formStatus.style.color = '#22c55e'; // Green
+          formStatus.innerText = 'Request sent successfully! We will contact you soon.';
+          consultationForm.reset();
+          setTimeout(() => {
+            consultationModal.classList.remove('active');
+            formStatus.style.display = 'none';
+          }, 3000);
+        } else {
+          formStatus.style.color = '#ef4444'; // Red
+          formStatus.innerText = result.error || 'Failed to send request. Please try again.';
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        formStatus.style.color = '#ef4444'; // Red
+        formStatus.innerText = 'A network error occurred. Please try again later.';
+      } finally {
+        submitBtn.innerText = 'Submit Request';
+        submitBtn.disabled = false;
+      }
     });
   }
   // --- YT Carousel Logic ---
@@ -257,9 +288,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: journeySection,
-        start: 'top 50%',
-        end: 'bottom 50%',
-        scrub: 0.5
+        start: 'top 70%',
+        end: 'center 40%',
+        scrub: 0.2
       }
     });
 
@@ -311,4 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Contact Dropdown Logic ---
+  const contactToggle = document.getElementById('contact-toggle');
+  const contactDropdown = document.getElementById('contact-dropdown');
+
+  if (contactToggle && contactDropdown) {
+    contactToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      contactDropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!contactToggle.contains(e.target) && !contactDropdown.contains(e.target)) {
+        contactDropdown.classList.remove('active');
+      }
+    });
+  }
 });
