@@ -1951,3 +1951,49 @@ footer {
   background: var(--bg-cream);
   color: var(--primary);
 }
+
+/* --- YouTube Section Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .yt-title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .yt-title {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+  .yt-desc {
+    max-width: 100%;
+    text-align: left;
+  }
+  .yt-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .yt-nav-btn.prev {
+    left: 10px;
+  }
+  .yt-nav-btn.next {
+    right: 10px;
+  }
+  .yt-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .yt-overlay-top {
+    padding: 16px;
+  }
+  .yt-channel-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  .yt-channel-text strong {
+    font-size: 0.9rem;
+  }
+  .yt-channel-text span {
+    font-size: 0.75rem;
+  }
+}

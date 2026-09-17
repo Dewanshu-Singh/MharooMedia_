@@ -21,9 +21,9 @@
     <div class="container nav-container">
       <div class="logo-wrapper">
         <a href="#" class="logo" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: clamp(32px, 5vw, 45px); object-fit: contain;">
-            <span style="font-family: var(--font-serif); font-size: clamp(1.1rem, 4vw, 1.4rem); font-weight: 700; color: var(--primary);">Mharoo Media</span>
+          <div style="display: flex; align-items: center; gap: clamp(4px, 1vw, 8px);">
+            <img src="/logo21.png" alt="Mharoo Media Logo" class="brand-logo" style="height: clamp(24px, 5vw, 45px); object-fit: contain;">
+            <span style="font-family: var(--font-serif); font-size: clamp(0.9rem, 4vw, 1.4rem); font-weight: 700; color: var(--primary); white-space: nowrap;">Mharoo Media</span>
           </div>
           <span class="logo-tagline">Growing a Brighter Tomorrow</span>
         </a>
@@ -37,11 +37,11 @@
           <li><a href="#about">About</a></li>
         </ul>
       </nav>
-      <div style="display: flex; gap: 1.5rem; align-items: center;">
+      <div style="display: flex; gap: clamp(0.25rem, 2vw, 1.5rem); align-items: center;">
         <div class="contact-dropdown-wrapper" style="position: relative;">
-          <button class="nav-phone" id="contact-toggle" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: var(--primary); font-size: 1rem; font-family: inherit; padding: 0;">
-            <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
-            +91 90011 03805
+          <button class="nav-phone" id="contact-toggle" style="background: rgba(142, 1, 1, 0.05); border: 1px solid rgba(142, 1, 1, 0.2); cursor: pointer; display: flex; align-items: center; gap: clamp(0.2rem, 1vw, 0.5rem); font-weight: 500; color: var(--primary); font-size: clamp(0.75rem, 3vw, 1rem); font-family: inherit; padding: clamp(0.2rem, 1vw, 0.4rem) clamp(0.4rem, 2vw, 0.8rem); border-radius: 50px; white-space: nowrap;">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i>
+            <span class="nav-phone-text">+91 90011 03805</span>
           </button>
           <div class="contact-dropdown" id="contact-dropdown">
             <a href="tel:+919001103805" class="dropdown-item">
