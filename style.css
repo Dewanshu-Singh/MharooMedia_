@@ -2099,9 +2099,10 @@ footer {
   }
   .yt-overlay-top {
     padding: 16px;
-   .yt-channel-logo {
   }
+  .yt-channel-logo {
     width: 32px;
+  }
     height: 32px;
     font-size: 1rem;
   }
@@ -2114,7 +2115,9 @@ footer {
 }
 
 .marquee-google-img {
-  height: 1.15em;
+  height: 1.15em !important;
   margin: 0 0.3em;
   vertical-align: middle;
+  filter: none !important;
+  opacity: 1 !important;
 }
