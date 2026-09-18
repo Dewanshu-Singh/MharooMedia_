@@ -615,7 +615,7 @@ header.scrolled {
 .collaborations-section {
   position: relative;
   padding: var(--spacing-8) 0;
-  background-color: var(--primary);
+  background: linear-gradient(135deg, rgba(95,0,0,0.95) 0%, rgba(142,1,1,0.8) 100%);
   overflow: hidden;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
