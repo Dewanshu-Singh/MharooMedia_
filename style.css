@@ -549,6 +549,17 @@ header.scrolled {
   transition: var(--transition);
 }
 
+@media (max-width: 768px) {
+  .clients-row {
+    gap: 1.5rem;
+  }
+  .client-logo {
+    max-height: 50px !important;
+    max-width: 40vw !important;
+    height: auto !important;
+  }
+}
+
 .client-logo:hover {
   transform: scale(1.05);
 }
