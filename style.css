@@ -2103,6 +2103,200 @@ footer {
   .yt-channel-logo {
     width: 32px;
     height: 32px;
+@media (max-width: 992px) {
+  .section {
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-tagline {
+    display: none;
+  }
+  #nav-cta {
+    display: none !important;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(22, 9, 9, 0.98);
+    padding: var(--spacing-4);
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  /* Hero Fixes */
+  .hero {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .hero-content {
+    margin-bottom: var(--spacing-4);
+  }
+  .stat-item {
+    padding: var(--spacing-2) 0;
+  }
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+  .stats-grid, .scs-metrics {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .hero-content, .positioning-grid, .features-grid, .solutions-grid, .insights-grid, .leaders-grid, .footer-grid, .events-grid, .reels-grid, .videos-grid, .video-ad-grid, .scs-main-grid, .scs-bottom-metrics, .scs-metric-right {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  .scs-top-eyebrows {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  .scs-metric-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: var(--spacing-4) 0 !important;
+  }
+  .scs-metric-item:last-child {
+    border-bottom: none;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-right {
+    display: none;
+  }
+  .journey-nodes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+  .journey-line {
+    width: 1px;
+    height: 100%;
+    left: 5px;
+    top: 0;
+  }
+  .journey-progress {
+    width: 1px;
+    height: 0%;
+    left: 5px;
+    top: 0;
+    transition: height 1s ease;
+  }
+  .node {
+    flex-direction: row;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    text-align: center;
+  }
+}
+
+/* --- Contact Dropdown Navbar --- */
+.contact-dropdown-wrapper:hover .contact-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+}
+.contact-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 100;
+  min-width: 160px;
+}
+.contact-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: white;
+}
+.contact-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--text-charcoal);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+.contact-dropdown .dropdown-item:hover {
+  background: var(--bg-cream);
+  color: var(--primary);
+}
+
+/* --- YouTube Section Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .yt-title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .yt-title {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+  .yt-desc {
+    max-width: 100%;
+    text-align: left;
+  }
+  .yt-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .yt-nav-btn.prev {
+    left: 10px;
+  }
+  .yt-nav-btn.next {
+    right: 10px;
+  }
+  .yt-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .yt-overlay-top {
+    padding: 16px;
+  }
+  .yt-channel-logo {
+    width: 32px;
+    height: 32px;
     font-size: 1rem;
   }
   .yt-channel-text strong {
@@ -2111,4 +2305,10 @@ footer {
   .yt-channel-text span {
     font-size: 0.75rem;
   }
+}
+
+.marquee-google-img {
+  height: 1.15em;
+  margin: 0 0.3em;
+  vertical-align: middle;
 }
