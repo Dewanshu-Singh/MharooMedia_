@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Initialize Lenis smooth scrolling
 const lenis = new Lenis({
   autoRaf: true,
-  duration: 1.2,
+  duration: 0.7,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
 });
 
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       y: 50,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.5,
       ease: 'power3.out'
     });
   });
