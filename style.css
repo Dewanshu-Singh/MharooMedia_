@@ -615,8 +615,7 @@ header.scrolled {
 .collaborations-section {
   position: relative;
   padding: var(--spacing-8) 0;
-  background-color: var(--primary);
-  background-image: linear-gradient(135deg, rgba(95,0,0,0.95) 0%, rgba(142,1,1,0.8) 100%);
+  background: #730202;
   overflow: hidden;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -698,7 +697,7 @@ header.scrolled {
 /* Signature Case Study */
 .signature-case-study {
   position: relative;
-  background-color: var(--primary);
+  background: #730202;
   color: var(--text-light);
   overflow: hidden;
   padding: 96px 0;
@@ -717,13 +716,7 @@ header.scrolled {
 }
 
 .scs-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(95,0,0,0.95) 0%, rgba(142,1,1,0.8) 100%);
-  z-index: 1;
+  display: none;
 }
 
 .scs-container {
