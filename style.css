@@ -611,6 +611,95 @@ header.scrolled {
 .feature-card:hover .feature-icon {
   transform: scale(1.1) translateY(-2px);
 }
+/* Company Collaborations */
+.collaborations-section {
+  position: relative;
+  padding: var(--spacing-8) 0;
+  background-color: var(--bg-darker);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.collab-bg-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1599661559882-777271926b48?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 20%;
+  opacity: 0.15;
+  filter: grayscale(100%) sepia(100%) hue-rotate(320deg) saturate(300%) contrast(150%);
+  z-index: 1;
+}
+
+.collab-title {
+  color: #a0a0a0;
+  font-size: 1.125rem;
+  letter-spacing: 0.25em;
+  margin-bottom: var(--spacing-8);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.collab-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+}
+
+.collab-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collab-name {
+  color: var(--text-light);
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.collab-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.snapchat-icon {
+  background-color: #FFFC00;
+}
+
+.jio-icon {
+  background: linear-gradient(135deg, #0A78F2, #E6007A);
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-icon {
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .collab-grid {
+    gap: var(--spacing-4);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: var(--spacing-4);
+  }
+  .collab-name {
+    font-size: 1.5rem;
+  }
+  .collab-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 /* Signature Case Study */
 .signature-case-study {
