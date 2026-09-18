@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 1.2);
 
   // --- ScrollTrigger: Stats Counters ---
-  const stats = document.querySelectorAll('.gsap-stat h3, .scs-metrics h3');
+  const stats = document.querySelectorAll('.gsap-stat h3, .scs-bottom-metrics h3, .stat-item h3');
   stats.forEach(stat => {
     const valSpan = stat.hasAttribute('data-val') ? stat : stat.querySelector('span[data-val]');
     if (!valSpan) return;
