@@ -1254,11 +1254,9 @@ header.scrolled {
     grid-auto-rows: 150px;
     gap: var(--spacing-3);
   }
-  .span-2-col {
-    grid-column: span 2 !important;
-  }
-  .span-2-row {
-    grid-row: span 2 !important;
+  .span-2-col, .span-2-row {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 }
 
