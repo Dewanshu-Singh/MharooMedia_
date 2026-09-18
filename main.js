@@ -140,6 +140,26 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide);
       });
     });
+
+    // Swipe support for YT Carousel
+    const ytCarousel = document.getElementById('yt-carousel');
+    if (ytCarousel) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      ytCarousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      ytCarousel.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) { // swipe left (next)
+          currentSlide = (currentSlide + 1) % ytSlides.length;
+          showSlide(currentSlide);
+        } else if (touchEndX - touchStartX > 50) { // swipe right (prev)
+          currentSlide = (currentSlide - 1 + ytSlides.length) % ytSlides.length;
+          showSlide(currentSlide);
+        }
+      }, { passive: true });
+    }
   }
 
   // --- Reel 3D Carousel Logic ---
@@ -191,6 +211,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+
+    // Swipe support for Reels Carousel
+    const reelsCarousel = document.querySelector('.reels-track') || document.querySelector('.reels-grid') || document.querySelector('#reels');
+    if (reelsCarousel) {
+      let rTouchStartX = 0;
+      let rTouchEndX = 0;
+      reelsCarousel.addEventListener('touchstart', e => {
+        rTouchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      reelsCarousel.addEventListener('touchend', e => {
+        rTouchEndX = e.changedTouches[0].screenX;
+        if (rTouchStartX - rTouchEndX > 50) { // swipe left (next)
+          activeReel = (activeReel + 1) % reelItems.length;
+          updateReelCarousel();
+        } else if (rTouchEndX - rTouchStartX > 50) { // swipe right (prev)
+          activeReel = (activeReel - 1 + reelItems.length) % reelItems.length;
+          updateReelCarousel();
+        }
+      }, { passive: true });
+    }
   }
 
   window.addEventListener('scroll', () => {
