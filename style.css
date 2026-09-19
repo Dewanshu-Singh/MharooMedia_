@@ -2213,20 +2213,20 @@ footer {
   opacity: 1 !important;
 }
 
-/* Floating CTA Button */
+/* Floating CTA Button - Default is Inverted (White/Black) for dark sections */
 .floating-cta-btn {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 9999;
-  background-color: var(--primary);
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 14px 28px;
   border-radius: 50px;
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(142, 1, 1, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   align-items: center;
@@ -2235,9 +2235,23 @@ footer {
 }
 .floating-cta-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(142, 1, 1, 0.5);
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #000000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
+
+/* Normal color (Maroon) for Hero and Light sections */
+.floating-cta-btn.normal-color {
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(142, 1, 1, 0.4);
+}
+.floating-cta-btn.normal-color:hover {
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(142, 1, 1, 0.5);
+}
+
 @media (max-width: 768px) {
   .floating-cta-btn {
     bottom: 20px;
@@ -2251,14 +2265,4 @@ footer {
   .floating-cta-btn:hover {
     transform: translateX(-50%) translateY(-4px);
   }
-}
-
-.floating-cta-btn.inverted {
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.floating-cta-btn.inverted:hover {
-  background-color: #f0f0f0;
-  color: #000000;
 }
