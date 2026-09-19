@@ -2212,3 +2212,43 @@ footer {
   filter: none !important;
   opacity: 1 !important;
 }
+
+/* Floating CTA Button */
+.floating-cta-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(142, 1, 1, 0.4);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.floating-cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(142, 1, 1, 0.5);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .floating-cta-btn {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    width: 90%;
+    padding: 16px;
+    font-size: 1.1rem;
+  }
+  .floating-cta-btn:hover {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
