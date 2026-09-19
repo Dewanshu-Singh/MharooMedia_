@@ -698,7 +698,7 @@ header.scrolled {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-4) var(--spacing-2);
     justify-items: start;
-    padding: 0 var(--spacing-2);
+    padding: 0;
   }
   .collab-name {
     font-size: 1.25rem;
