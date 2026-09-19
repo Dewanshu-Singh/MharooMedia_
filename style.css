@@ -1975,12 +1975,12 @@ footer {
     flex-direction: column;
     gap: var(--spacing-2);
   }
-  .scs-metric-item {
+  .scs-detail-box {
     border-right: none !important;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding: var(--spacing-4) 0 !important;
   }
-  .scs-metric-item:last-child {
+  .scs-detail-box:last-child {
     border-bottom: none;
   }
   .hero-actions {
