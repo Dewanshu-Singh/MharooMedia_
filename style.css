@@ -1950,6 +1950,9 @@ footer {
   .hero-bg {
     object-position: 75% center;
   }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
   .hero-content {
     margin-bottom: var(--spacing-4);
   }
