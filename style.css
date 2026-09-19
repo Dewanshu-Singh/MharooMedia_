@@ -1947,6 +1947,9 @@ footer {
     height: auto;
     padding-bottom: 40px;
   }
+  .hero-bg {
+    object-position: right center;
+  }
   .hero-content {
     margin-bottom: var(--spacing-4);
   }
