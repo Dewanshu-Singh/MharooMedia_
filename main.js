@@ -398,4 +398,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Mobile Services Modal Logic ---
+  const serviceCards = document.querySelectorAll('.solution-card');
+  const serviceModal = document.getElementById('service-modal');
+  const serviceModalContent = document.getElementById('service-modal-content');
+  const closeServiceModal = document.getElementById('close-service-modal');
+
+  if (serviceCards && serviceModal && serviceModalContent && closeServiceModal) {
+    serviceCards.forEach(card => {
+      card.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          serviceModalContent.innerHTML = card.innerHTML;
+          serviceModal.style.display = 'flex';
+          setTimeout(() => {
+            serviceModal.classList.add('active');
+          }, 10);
+        }
+      });
+    });
+
+    const closeMod = () => {
+      serviceModal.classList.remove('active');
+      setTimeout(() => {
+        serviceModal.style.display = 'none';
+        serviceModalContent.innerHTML = '';
+      }, 300);
+    };
+
+    closeServiceModal.addEventListener('click', closeMod);
+    serviceModal.addEventListener('click', (e) => {
+      if (e.target === serviceModal) {
+        closeMod();
+      }
+    });
+  }
 });

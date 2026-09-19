@@ -2119,6 +2119,90 @@ footer {
   .yt-channel-text span {
     font-size: 0.75rem;
   }
+  
+  /* Mobile Services List Styles */
+  .solutions-grid {
+    gap: var(--spacing-2);
+  }
+  .solution-card {
+    background: transparent;
+    box-shadow: none;
+    padding: var(--spacing-2) 0;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0;
+  }
+  .solution-card::before {
+    display: none;
+  }
+  .solution-card:hover {
+    transform: none;
+    background: transparent;
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: none;
+  }
+  .solution-card .solution-num,
+  .solution-card ul,
+  .solution-card .solution-arrow {
+    display: none;
+  }
+  .solution-card h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 4px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    color: var(--text-charcoal);
+  }
+}
+
+/* Service Modal Global Styles (used on mobile) */
+.service-modal-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.service-modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#service-modal-content .solution-num {
+  font-family: var(--font-sans);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-4);
+  display: block;
+}
+#service-modal-content h3 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-3);
+  color: var(--text-dark);
+}
+#service-modal-content ul {
+  list-style: none;
+  font-size: 1rem;
+  margin-bottom: var(--spacing-6);
+  color: var(--text-muted);
+}
+#service-modal-content ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+#service-modal-content ul li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+#service-modal-content .solution-arrow {
+  display: none; /* Hide arrow in modal */
 }
 
 .marquee-google-img {

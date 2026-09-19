@@ -782,6 +782,16 @@
       </div>
     </div>
   </div>
+  
+  <!-- SERVICE MODAL (MOBILE ONLY) -->
+  <div class="service-modal-overlay" id="service-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
+    <div style="position: relative; width: 100%; max-width: 400px; background: var(--bg-cream); border-radius: 12px; padding: 24px;">
+      <button id="close-service-modal" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-charcoal); line-height: 1;">✕</button>
+      <div id="service-modal-content">
+        <!-- Service card content will be inserted here dynamically -->
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="./main.js"></script>
 </body>
