@@ -436,15 +436,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Floating CTA Scroll Interaction ---
   const floatingCta = document.querySelector('.floating-cta-btn');
-  const normalSections = document.querySelectorAll('.hero, .bg-light, .bg-cream');
+  // Dark sections where the CTA should be white (inverted)
+  const darkSections = document.querySelectorAll('.bg-primary, .bg-dark, .collaborations-section, .signature-case-study, .cta-glow-section, footer');
 
-  if (floatingCta && normalSections.length > 0) {
-    normalSections.forEach(sec => {
+  if (floatingCta && darkSections.length > 0) {
+    darkSections.forEach(sec => {
       ScrollTrigger.create({
         trigger: sec,
         start: "top 95%", 
         end: "bottom 95%",
-        toggleClass: {targets: floatingCta, className: "normal-color"}
+        toggleClass: {targets: floatingCta, className: "inverted"}
       });
     });
   }
