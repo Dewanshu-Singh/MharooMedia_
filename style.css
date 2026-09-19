@@ -1948,7 +1948,7 @@ footer {
     padding-bottom: 40px;
   }
   .hero-bg {
-    object-position: right center;
+    object-position: 75% center;
   }
   .hero-content {
     margin-bottom: var(--spacing-4);
