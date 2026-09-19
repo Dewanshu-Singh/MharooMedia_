@@ -2252,3 +2252,13 @@ footer {
     transform: translateX(-50%) translateY(-4px);
   }
 }
+
+.floating-cta-btn.inverted {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.floating-cta-btn.inverted:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
