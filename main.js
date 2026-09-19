@@ -449,4 +449,52 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Contact Form Handling ---
+  const contactForm = document.getElementById('consultation-form');
+  const formStatus = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      // Loading state
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      formStatus.style.display = 'none';
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          formStatus.textContent = 'Request sent successfully! We will contact you soon.';
+          formStatus.style.color = '#28a745'; // success green
+          formStatus.style.display = 'block';
+          contactForm.reset();
+        } else {
+          throw new Error(result.error || 'Failed to send request');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        formStatus.textContent = 'Error: ' + error.message;
+        formStatus.style.color = '#dc3545'; // error red
+        formStatus.style.display = 'block';
+      } finally {
+        submitBtn.textContent = 'Submit Request';
+        submitBtn.disabled = false;
+      }
+    });
+  }
 });
