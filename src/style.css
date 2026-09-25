@@ -294,3 +294,4 @@ code {
     border-right-color: var(--border);
   }
 }
+.carousel-btn:hover { background: rgba(0,0,0,0.9) !important; }

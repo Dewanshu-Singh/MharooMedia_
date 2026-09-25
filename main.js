@@ -449,4 +449,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Campaign Carousel Handling ---
+  const carouselImg = document.getElementById('scs-carousel-img');
+  const prevBtn = document.getElementById('scs-prev-btn');
+  const nextBtn = document.getElementById('scs-next-btn');
+  
+  if(carouselImg && prevBtn && nextBtn) {
+    const images = ['/img1.jpeg', '/img2.jpeg', '/img3.png', '/img4.png', '/img5.jpeg', '/img6.jpeg', '/img7.jpeg'];
+    let currentIndex = 0;
+    
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      carouselImg.style.opacity = 0;
+      setTimeout(() => {
+        carouselImg.src = images[currentIndex];
+        carouselImg.style.opacity = 1;
+      }, 300);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      carouselImg.style.opacity = 0;
+      setTimeout(() => {
+        carouselImg.src = images[currentIndex];
+        carouselImg.style.opacity = 1;
+      }, 300);
+    });
+  }
 });

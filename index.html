@@ -183,8 +183,14 @@
             </div>
           </div>
           
-          <div class="scs-campaign-image" style="margin-top: 1.5rem;">
-            <img src="/first.jpeg" alt="Our Campaign" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+          <div class="scs-campaign-carousel" style="margin-top: 1.5rem; position: relative;">
+            <button class="carousel-btn prev-btn" id="scs-prev-btn" style="position: absolute; top: calc(50% - 15px); left: 10px; background: rgba(0,0,0,0.6); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: background 0.3s ease;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <img src="/img1.jpeg" alt="Our Campaign" id="scs-carousel-img" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: opacity 0.3s ease; aspect-ratio: 16/9; object-fit: cover;">
+            <button class="carousel-btn next-btn" id="scs-next-btn" style="position: absolute; top: calc(50% - 15px); right: 10px; background: rgba(0,0,0,0.6); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: background 0.3s ease;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
             <p style="font-family: var(--font-sans); font-size: 0.8rem; font-style: italic; opacity: 0.7; text-align: center;">One of our campaigns</p>
           </div>
         </div>
