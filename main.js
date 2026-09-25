@@ -458,23 +458,49 @@ document.addEventListener('DOMContentLoaded', () => {
   if(carouselImg && prevBtn && nextBtn) {
     const images = ['/img1.jpeg', '/img2.jpeg', '/img3.png', '/img4.png', '/img5.jpeg', '/img6.jpeg', '/img7.jpeg'];
     let currentIndex = 0;
-    
-    prevBtn.addEventListener('click', () => {
+    const prevSlide = () => {
       currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
       carouselImg.style.opacity = 0;
       setTimeout(() => {
         carouselImg.src = images[currentIndex];
         carouselImg.style.opacity = 1;
       }, 300);
-    });
+    };
     
-    nextBtn.addEventListener('click', () => {
+    const nextSlide = () => {
       currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
       carouselImg.style.opacity = 0;
       setTimeout(() => {
         carouselImg.src = images[currentIndex];
         carouselImg.style.opacity = 1;
       }, 300);
-    });
+    };
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Touch support for swiping
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselImg.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+
+    carouselImg.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+
+    const handleSwipe = () => {
+      if (touchEndX < touchStartX - 50) {
+        // Swiped left (next slide)
+        nextSlide();
+      }
+      if (touchEndX > touchStartX + 50) {
+        // Swiped right (previous slide)
+        prevSlide();
+      }
+    };
   }
 });
